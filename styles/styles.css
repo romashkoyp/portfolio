@@ -190,7 +190,6 @@ p {
 .projects {
   display: flex;
   flex-direction: row;
-  /* margin: 2em; */
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -295,14 +294,14 @@ p {
 .photo {
   height: auto;
   object-fit: cover;
-  width: clamp(7rem, 25vw, 25rem);
+  width: clamp(8rem, 25vw, 25rem);
   filter: grayscale(100%);
 }
 
 .bracket-left {
   order: 1;
   left: 0;
-  font-size: clamp(7rem, 28vw, 28rem);
+  font-size: clamp(9.5rem, 28vw, 28rem);
   font-family: monospace;
   color: transparent;
   background: linear-gradient(45deg, #ff00ff, #0000ff);
@@ -312,7 +311,7 @@ p {
 .bracket-right {
   order: 4;
   right: 0;
-  font-size: clamp(7rem, 28vw, 28rem);
+  font-size: clamp(9.5rem, 28vw, 28rem);
   font-family: monospace;
   color: transparent;
   background: linear-gradient(45deg, #0000ff, #ff00ff);
@@ -439,6 +438,6 @@ footer a:hover {
     padding: 1em;
   }
   p {
-    font-size: smaller;
+    font-size: 0.87em;
   }
 }
