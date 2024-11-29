@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yaroslav Romashko, professional profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/91c7a109fb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <div class="menu" id="myMenu">
+      <a class="a-nav" onclick="closeMenu()" href="#profile">Profile</a>
+      <a class="a-nav" onclick="closeMenu()" href="#skills">Skills</a>
+      <a class="a-nav" onclick="closeMenu()" href="#education">Education</a>
+      <a class="a-nav" onclick="closeMenu()" href="#projects">Projects</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </a>
+    </div>
+
+    <!-- container for the rest of content -->
+    <div class="container-body">
+
+      <!-- main container for image and title -->
+      <div class="main-container">
+        <div class="bracket-left">/</div>
+        
+        <!-- container for image -->
+        <div class="photo-frame">
+          <div class="photo-container">
+              <img src="images/image.png" alt="Portrait" class="photo" />
+          </div>
+        </div>
+
+        <!-- container for title -->
+        <div class="title-container">
+          <h2 class="title">FULLSTACK DEVELOPER</h2>
+          <h1 class="name">YAROSLAV</h1>
+          <h1 class="name">ROMASHKO</h1>
+          <a href="mailto:romashkoyp@gmail.com" class="desktop-button contact">
+            <i class="fa-solid fa-envelope"></i>Send Email
+          </a>
+        </div>
+
+        <div class="bracket-right">/</div>
+        <a href="mailto:romashkoyp@gmail.com" class="mobile-button contact">
+          <i class="fa-solid fa-envelope"></i>Send Email
+        </a>
+      </div>
+
+      <!-- container for profile information -->
+      <div id="profile" class="profile">
+        <h2>Professional profile</h2>
+        <p>
+          I worked for about 6 years in an IT association in my home country,
+          where I was responsible for marketing and attracting new companies
+          to the association (B2B sales). Before that, I had a university
+          degree in management and marketing.
+        </p>
+        <br>
+        <p>
+          I am now focused on changing my profession in Finland to become a developer, 
+          and I am really excited about creating new programs and solving interesting tasks. 
+          I have completed a couple of IT projects, which you can find below, including 
+          this website I made. In my free time, I help researchers with data analysis.
+        </p>
+        <br>
+        <p>
+          If your company or you personally need an intern or junior developer,
+          just let me know about it.
+        </p>
+      </div>
+
+      <!-- container for skills -->
+      <div id="skills" class="skills">
+        <div class="words">
+          <span style="margin-bottom: 0.5em; font-size: 2em;">Jest</span>
+          <span style="margin-top: 1em;">PostgreSQL</span>
+          <span style="margin-top: 1.5em; font-size: 1.3em;">Django</span>
+        </div>
+
+        <div class="words">
+          <span style="margin-top: 0em; font-size: 1.5em;">React</span>
+          <h1 class="name">DEVELOPER</h1>
+          <span style="margin-top: 0.5em;">Node.js</span>
+        </div>
+
+        <div class="words">
+          <span style="margin-top: 0.2em; font-size: 1.7em;">Docker</span>
+          <span style="margin-bottom: 0.5em;">Playwright</span>
+          <span style="margin-top: 0.2em; font-size: 2em;">Mongo</span>
+        </div>
+      </div>
+
+      <!-- container for education-->
+      <div id="education" class="education">
+        <h2><i class="fa-solid fa-graduation-cap" style="margin-right: 1em;"></i>Education and courses</h2>
+        <div>
+          <h3>University of Applied Sciences, Jyväskylä</h3>
+          <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2024-2028</p>
+        </div>
+        <p>Engineer (Bachelor of Science), Information Technology</p>
+        <br>
+        <br>
+        <div>
+          <h3>University of Helsinki</h3>
+          <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2024</p>
+        </div>
+        <p>Full Stack Open course, open studies.</p>
+        <p>React, NodeJS, Express, MongoDB, Deploiment Web App (7 credits)</p>
+        <p>React Native (2 credits)</p>
+        <p>GraphQL (1 credit)</p>
+        <p>Relational databases (1 credit)</p>
+        <p>CI/CD (1 credit)</p>
+        <p>Containers (1 credit)</p>
+        <p>Own project in progress - 95% (see below Roomies App)</p>
+        <br>
+        <br>
+        <div>
+          <h3>Harvard University</h3>
+          <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2022-2023</p>
+        </div>
+        <p>CS50x course, open studies.</p>
+        <p>Basics of IT: C, Python, SQL</p>
+        <p>10 problem sets, 9 labs and final project (see below Selvä Vastaus)</p>
+      </div>
+
+      <!-- container for languages -->
+      <aside class="languages">
+        <div style="background-color: #f1e8f8; box-shadow: none;">
+          <h2>Languages</h2>
+        </div>
+                
+        <div>
+          <h2>Russian</h2>
+          <p>Native or bilingual proficiency</p>
+        </div>
+
+        <div>
+          <h2>English</h2>
+          <p>Professional working proficiency</p>
+        </div>
+
+        <div>
+          <h2>Finnish</h2>
+          <p>Working proficiency</p>
+        </div>
+
+      </aside>
+
+      
+      <div id="projects" class="header">
+        <h2>Projects</h2>
+      </div>
+
+      <!-- container for projects -->
+      <div class="projects">
+
+        <!-- Project 1 -->
+        <article class="project">
+
+          <div class="screenshot">
+            <a href="images/roomies.png" target="_blank">
+              <img src="images/roomies.png" alt="Screenshot of the Roomies App booking interface" />
+            </a>
+          </div>
+
+          <div class="project-content">
+            <h2 style="text-align: center;">Roomies App</h2>
+            <p>
+              Web application built with JavaScript, Node.js, Docker, Express, PostgreSQL, 
+              Jest for the backend and React, Vite, React Redux, React Big Calendar, Styled 
+              Components, Playwright. Eslint used for both parts.
+              The basic idea is to book a room in a hotel or office building with authorized 
+              access and administrative control. This is the final project for the 
+              Full Stack Open Course from the University of Helsinki.
+            </p>
+          </div>
+          <a href="https://github.com/romashkoyp/roomies" class="project-button contact" target="_blank" style="width: auto; padding: 0 1em;">
+            View Roomies App on GitHub
+          </a>
+        </article>
+
+        <!-- Project 2 -->  
+        <article class="project">
+          <div class="screenshot">
+            <a href="images/selvavastaus.png" target="_blank">
+              <img src="images/selvavastaus.png" alt="Screenshot of the Selvä Vastaus interface" />
+            </a>
+          </div>
+
+          <div class="project-content">
+            <h2 style="text-align: center;">Selvä Vastaus</h2>
+            <p>Web application built with Python, Flask, Jinja, and SQLite for the backend, and HTML, CSS, Bootstrap for frontend rendering.</p>
+            <p>The basic idea is to find Finnish words by their endings. This is the final project for the CS50x course from Harvard University.</p>
+          </div>
+          <a href="https://selvavastaus.onrender.com/" class="project-button contact" target="_blank" style="width: auto; padding: 0 1em;">
+            Visit Selvä Vastaus Website
+          </a>
+        </article>
+
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myMenu");
+        if (x.className === "menu") {
+            x.className += " responsive";
+        } else {
+            x.className = "menu";
+        }
+      }
+
+      function closeMenu() {
+        var x = document.getElementById("myMenu");
+        x.className = "menu";
+      }
+    </script>
+  <!-- standard footer -->
+  <footer>
+    <div>
+      <a href="mailto:romashkoyp@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/romashkoyp" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/romashkoyp/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p>Yaroslav Romashko © 2024</p>
+  </footer>
+  </body>
+</html>
