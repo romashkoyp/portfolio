@@ -8,7 +8,7 @@
 }
 
 body {
-  border-width: clamp(0.3rem, 0.8vw, 1rem);
+  border-width: clamp(0.05rem, 0.8vw, 1rem);
   border-style: solid;
   border-color: #390082;
   background: #f1e8f8;
@@ -77,6 +77,10 @@ h2 {
   margin-bottom: 1em;
 }
 
+p {
+  text-align: justify;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
@@ -112,7 +116,7 @@ h2 {
   align-items: center;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-size: clamp(0.5rem, 2vw, 2rem);
+  font-size: clamp(0.6rem, 2vw, 2rem);
 }
 
 .words {
@@ -186,7 +190,7 @@ h2 {
 .projects {
   display: flex;
   flex-direction: row;
-  margin: 2em;
+  /* margin: 2em; */
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -430,5 +434,11 @@ footer a:hover {
   .languages div {
     flex-basis: 100%;
     margin: 0.5em 0;
+  }
+  .education {
+    padding: 1em;
+  }
+  p {
+    font-size: smaller;
   }
 }
