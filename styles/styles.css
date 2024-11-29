@@ -83,12 +83,8 @@ p {
 
 .main-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 1em;
-  width: 100%;
 }
 
 .title-container {
@@ -116,7 +112,7 @@ p {
   align-items: center;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-size: clamp(0.6rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 2vw, 2rem);
 }
 
 .words {
