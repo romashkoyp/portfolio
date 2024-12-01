@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title>Yaroslav Romashko</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,17 @@
   <body>
 
     <!-- navbar -->
-    <div class="menu" id="myMenu">
-      <a class="a-nav" onclick="closeMenu()" href="#profile">Profile</a>
-      <a class="a-nav" onclick="closeMenu()" href="#skills">Skills</a>
-      <a class="a-nav" onclick="closeMenu()" href="#education">Education</a>
-      <a class="a-nav" onclick="closeMenu()" href="#projects">Projects</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <nav class="main-nav" id="mainNav">
+      <button type="button" class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
         <i class="fa-solid fa-bars fa-lg"></i>
-      </a>
-    </div>
+      </button>
+      <ul class="nav-list">
+        <li><a class="nav-link" onclick="closeMenu()" href="#profile">Profile</a></li>
+        <li><a class="nav-link" onclick="closeMenu()" href="#skills">Skills</a></li>
+        <li><a class="nav-link" onclick="closeMenu()" href="#education">Education</a></li>
+        <li><a class="nav-link" onclick="closeMenu()" href="#projects">Projects</a></li>
+      </ul>
+    </nav>
 
     <!-- container for the rest of content -->
     <main class="container-body">
@@ -60,7 +62,7 @@
       </div>
 
       <!-- container for profile information -->
-      <div id="profile" class="profile">
+      <section id="profile" class="profile">
         <h2>Professional profile</h2>
         <p>
           I worked for about 6 years in an IT association in my home country,
@@ -80,10 +82,10 @@
           If your company or you personally need an intern or junior developer,
           just let me know about it.
         </p>
-      </div>
+      </section>
 
       <!-- container for skills -->
-      <div id="skills" class="skills">
+      <section id="skills" class="skills">
         <div class="words">
           <span style="margin-bottom: 0.5em; font-size: 2em;">Jest</span>
           <span style="margin-top: 1em;">PostgreSQL</span>
@@ -101,10 +103,10 @@
           <span style="margin-bottom: 0.5em;">Playwright</span>
           <span style="margin-top: 0.2em; font-size: 2em;">Mongo</span>
         </div>
-      </div>
+      </section>
 
       <!-- container for education-->
-      <div id="education" class="education">
+      <section id="education" class="education">
         <h2><i class="fa-solid fa-graduation-cap" style="margin-right: 1em;"></i>Education</h2>
         <div>
           <h3>University of Applied Sciences, Jyväskylä</h3>
@@ -112,6 +114,7 @@
         </div>
         <p>Engineer (Bachelor of Science), Information Technology</p>
         <br>
+        <hr>
         <br>
         <div>
           <h3>University of Helsinki</h3>
@@ -126,6 +129,7 @@
         <p>Containers (1 credit)</p>
         <p>Own project in progress - 95% (see below Roomies App)</p>
         <br>
+        <hr>
         <br>
         <div>
           <h3>Harvard University</h3>
@@ -134,7 +138,7 @@
         <p>CS50x course, open studies.</p>
         <p>Basics of IT: C, Python, SQL</p>
         <p>10 problem sets, 9 labs and final project (see below Selvä Vastaus)</p>
-      </div>
+      </section>
 
       <!-- container for languages -->
       <aside class="languages">
@@ -158,11 +162,10 @@
         </div>
 
       </aside>
-
       
-      <div id="projects" class="header">
+      <section id="projects" class="header">
         <h2>Projects</h2>
-      </div>
+      </section>
 
       <!-- container for projects -->
       <div class="projects">
@@ -214,20 +217,17 @@
     </main>
 
     <script>
-      function myFunction() {
-        var x = document.getElementById("myMenu");
-        if (x.className === "menu") {
-            x.className += " responsive";
-        } else {
-            x.className = "menu";
-        }
+      const toggleMenu = () => {
+        const nav = document.getElementById("mainNav");
+        nav.classList.toggle("responsive");
       }
 
-      function closeMenu() {
-        var x = document.getElementById("myMenu");
-        x.className = "menu";
+      const closeMenu = () => {
+        const nav = document.getElementById("mainNav");
+        nav.classList.remove("responsive");
       }
     </script>
+
   <!-- standard footer -->
   <footer>
     <div>
