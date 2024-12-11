@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
-h1.name {
+h1.name, h4.developer {
   background: linear-gradient(to right, #f82d96, #9747ff, #0075ff);
   -webkit-text-fill-color: transparent;
   background-clip: padding-box;
