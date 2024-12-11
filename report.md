@@ -24,22 +24,22 @@
 
 ## 2. Rakennekaavio
 
-Verkkosivu
-├── Navigointipalkki
-│ ├── Profiili
-│ ├── Taidot
-│ ├── Koulutus
-│ └── Projektit
-├── Pääosio
-│ ├── Profiilikuva ja otsikko
-│ ├── Profiiliteksti
-│ ├── Taidot (visuaalinen esitys)
-│ ├── Koulutustiedot
-│ ├── Kielet
-│ └── Projektit (kuvaukset ja linkit)
-└── Alatunniste
-├── Yhteystiedot
-└── Tekijänoikeustiedot
+1. Verkkosivu
+      - Navigointipalkki
+          - Profiili
+          - Taidot
+          - Koulutus
+          - Projektit
+2. Pääosio
+      - Profiilikuva ja otsikko
+      - Profiiliteksti
+      - Taidot (visuaalinen esitys)
+      - Koulutustiedot
+      - Kielet
+      - Projektit (kuvaukset ja linkit)
+3.  Alatunniste
+      - Yhteystiedot
+      - Tekijänoikeustiedot
 
 ## 3. Layout-suunnitelma
 
