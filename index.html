@@ -103,36 +103,42 @@
       <!-- container for education-->
       <section id="education" class="education">
         <h2><i class="fa-solid fa-graduation-cap" style="margin-right: 1em;"></i>Education</h2>
-        <div>
-          <h3>University of Applied Sciences, Jyväskylä</h3>
+        <div onclick="toggleElement('jamk'); toggleArrow('jamk')" style="cursor: pointer;">
+          <h3>University of Applied Sciences, Jyväskylä<i class="arrow right"></i></h3>
           <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2024-2027</p>
         </div>
-        <p>Engineer (Bachelor of Science), Information Technology</p>
+        <div id="jamk" style="display: none;">
+          <p>Engineer (Bachelor of Science), Information Technology</p>
+        </div>
         <br>
         <hr>
         <br>
-        <div>
-          <h3>University of Helsinki</h3>
+        <div onclick="toggleElement('helsinki'); toggleArrow('helsinki')" style="cursor: pointer;">
+          <h3>University of Helsinki<i class="arrow right"></i></h3>
           <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2024</p>
         </div>
-        <p>Full Stack Open course, open studies.</p>
-        <p>React, NodeJS, Express, MongoDB, Deploiment Web App (7 credits)</p>
-        <p>React Native (2 credits)</p>
-        <p>GraphQL (1 credit)</p>
-        <p>Relational databases (1 credit)</p>
-        <p>CI/CD (1 credit)</p>
-        <p>Containers (1 credit)</p>
-        <p>Roomies App (see below)</p>
+        <div id="helsinki" style="display: none;">
+          <p>Full Stack Open course, open studies.</p>
+          <p>React, NodeJS, Express, MongoDB, Deploiment Web App (7 credits)</p>
+          <p>React Native (2 credits)</p>
+          <p>GraphQL (1 credit)</p>
+          <p>Relational databases (1 credit)</p>
+          <p>CI/CD (1 credit)</p>
+          <p>Containers (1 credit)</p>
+          <p>Roomies App (see below)</p>
+        </div>
         <br>
         <hr>
         <br>
-        <div>
-          <h3>Harvard University</h3>
+        <div onclick="toggleElement('harward'); toggleArrow('harward')" style="cursor: pointer;">
+          <h3>Harvard University<i class="arrow right"></i></h3>
           <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2022-2023</p>
         </div>
-        <p>CS50x course, open studies.</p>
-        <p>Basics of IT: C, Python, SQL</p>
-        <p>10 problem sets, 9 labs and final project (see below Selvä Vastaus)</p>
+        <div id="harward" style="display: none;">
+          <p>CS50x course, open studies.</p>
+          <p>Basics of IT: C, Python, SQL</p>
+          <p>10 problem sets, 9 labs and final project (see below Selvä Vastaus)</p>
+        </div>
       </section>
 
       <!-- container for languages -->
@@ -226,6 +232,21 @@
       const closeMenu = () => {
         const nav = document.getElementById("mainNav");
         nav.classList.remove("responsive");
+      }
+
+      const toggleElement = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.style.display = element.style.display === 'none' ? 'block' : 'none';
+        }
+      }
+
+      const toggleArrow = (id) => {
+        const clickedDiv = document.querySelector(`div[onclick*="${id}"]`);
+        const arrow = clickedDiv.querySelector('.arrow');
+        if (arrow) {
+          arrow.classList.toggle('active');
+        }
       }
     </script>
 

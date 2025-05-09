@@ -155,6 +155,28 @@ p {
   transition: box-shadow 0.5s ease;
 }
 
+.arrow {
+  width: 0.5em;
+  height: 0.5em;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 0.7em;
+  transition: transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.arrow.right.active {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 .education:hover, .languages div:hover, .project:hover {
   box-shadow: 0 8px 16px rgba(57, 0, 130, 0.5);
 }
