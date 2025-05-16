@@ -90,7 +90,7 @@
         <div class="words">
           <span style="margin-top: 0em; font-size: 1.5em;">React</span>
           <h4 class="developer">DEVELOPER</h4>
-          <span style="margin-top: 0.5em;">Node.js</span>
+          <span style="margin-top: 0.5em;">NodeJS</span>
         </div>
 
         <div class="words">
@@ -129,35 +129,114 @@
               <tbody>
                 <tr>
                   <td>Full Stack Web Application Development Exercise</td>
-                  <td>10</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>10</span>
+                        <span></span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>React, NodeJS, Express, MongoDB, Deployment Web App</td>
-                  <td>7</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>7</span>
+                        <span>
+                          <a href="images/certificate-fullstack.png" class="certificate-link">
+                            <i class="fa-regular fa-file-lines fa-2xl"></i>
+                            <span class="tooltip">Certificate</span>
+                          </a>
+                        </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>React Native</td>
-                  <td>2</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>2</span>
+                        <span>
+                          <a href="images/certificate-reactnative.png" class="certificate-link">
+                            <i class="fa-regular fa-file-lines fa-2xl"></i>
+                            <span class="tooltip">Certificate</span>
+                          </a>
+                        </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>GraphQL</td>
-                  <td>1</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>1</span>
+                      <span>
+                        <a href="images/certificate-graphql.png" class="certificate-link">
+                          <i class="fa-regular fa-file-lines fa-2xl"></i>
+                          <span class="tooltip">Certificate</span>
+                        </a>
+                      </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Relational databases</td>
-                  <td>1</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>1</span>
+                      <span>
+                        <a href="images/certificate-psql.png" class="certificate-link">
+                          <i class="fa-regular fa-file-lines fa-2xl"></i>
+                          <span class="tooltip">Certificate</span>
+                        </a>
+                      </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>CI/CD</td>
-                  <td>1</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>1</span>
+                      <span>
+                        <a href="images/certificate-cicd.png" class="certificate-link">
+                          <i class="fa-regular fa-file-lines fa-2xl"></i>
+                          <span class="tooltip">Certificate</span>
+                        </a>
+                      </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Containers</td>
-                  <td>1</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>1</span>
+                      <span>
+                        <a href="images/certificate-containers.png" class="certificate-link">
+                          <i class="fa-regular fa-file-lines fa-2xl"></i>
+                          <span class="tooltip">Certificate</span>
+                        </a>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>TypeScript</td>
+                  <td>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                      <span>1</span>
+                      <span>
+                        <a href="images/certificate-typescript.png" class="certificate-link">
+                          <i class="fa-regular fa-file-lines fa-2xl"></i>
+                          <span class="tooltip">Certificate</span>
+                        </a>
+                      </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td><b>Total:</b></td>
-                  <td><b>23</b></td>
+                  <td><b>24</b></td>
                 </tr>
               </tbody>
             </table>
@@ -170,7 +249,15 @@
           <p class="p-education"><i class="fa-solid fa-calendar-days" style="margin-right: 1em;"></i>2022-2023</p>
         </div>
         <div id="harward" style="display: none;">
-          <p class="course">CS50x course, open studies.</p>
+          <p class="course">
+            CS50x course, open studies
+            <span>
+              <a href="images/certificate-CS50x.png" class="certificate-link">
+                <i class="fa-regular fa-file-lines fa-xl"></i>
+                <span class="tooltip">Certificate</span>
+              </a>
+            </span>
+          </p>
           <p>Basics of IT: C, Python, SQL</p>
           <p>10 problem sets, 9 labs and final project (see below Selvä Vastaus)</p>
         </div>
@@ -243,7 +330,7 @@
             <h2 style="text-align: center;">Roomies App</h2>
             <p>
               A comprehensive booking system developed using modern web technologies: 
-              JavaScript, Node.js, Docker, Express, and PostgreSQL for the backend, 
+              JavaScript, NodeJS, Docker, Express, and PostgreSQL for the backend, 
               complemented by React, Vite, Redux, React Big Calendar, Styled Components for the frontend. 
               The application features Jest for backend testing, Playwright for end-to-end testing, 
               and maintains code quality through ESLint. This enterprise-level solution enables authenticated 
@@ -282,6 +369,14 @@
       </div>
     </main>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img id="modalImg" src="images" alt="Enlarged image">
+      </div>
+    </div>
+
     <script>
       const toggleMenu = () => {
         const nav = document.getElementById("mainNav");
@@ -307,6 +402,47 @@
           arrow.classList.toggle('active');
         }
       }
+
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      const closeButton = document.getElementsByClassName("close-modal")[0];
+
+      const setupImageModal = () => {
+        const images = document.querySelectorAll(".screenshot a img, a[href$='.png'] i");
+        
+        images.forEach(img => {
+          img.parentElement.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            const imgUrl = this.getAttribute("href") || this.parentElement.getAttribute("href");
+            
+            modal.style.display = "block";
+            modalImg.src = imgUrl;
+            document.body.classList.add("no-scroll");
+          });
+        });
+
+        closeButton.addEventListener("click", closeModal);
+        
+        modal.addEventListener("click", function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+        
+        document.addEventListener("keydown", function(e) {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        });
+      }
+
+      const closeModal = () => {
+        modal.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      }
+
+      document.addEventListener("DOMContentLoaded", setupImageModal);
     </script>
 
   <!-- standard footer -->
