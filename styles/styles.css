@@ -1,10 +1,16 @@
 /* inspired by this design https://www.behance.net/gallery/212417965/Personal-Portfolio-Web-UI-DesignConcept?tracking_source=search_projects|web+design+portfolio&l=103 */
 
+:root {
+  --transition-standard: 0.4s cubic-bezier(.25,.5,.25,1);
+  --card-background:rgba(248, 248, 248);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  /* outline: 1px solid red !important; */
 }
 
 body {
@@ -25,7 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f8f8;
+  background-color: var(--card-background);
   padding: 0;
   width: 100%;
 }
@@ -37,7 +43,7 @@ body {
   padding: 0;
 }
 
-.nav-link, .nav-toggle {
+:is(.nav-link, .nav-toggle) {
   display: flex;
   width: 7em;
   justify-content: center;
@@ -46,7 +52,7 @@ body {
   color: black;
   font-size: 1.3em;
   padding: 1em 0;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: all var(--transition-standard);
 }
 
 .nav-toggle {
@@ -66,7 +72,7 @@ body {
   color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+:is(h1, h2, h3, h4, h5, h6) {
   font-family: "Noto Serif", serif;
   font-weight: 800;
 }
@@ -149,10 +155,10 @@ p {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  background-color: #f5f8f8;
+  background-color: var(--card-background);
   padding: 1em 3em 3em 3em;
   box-shadow: 0 4px 12px rgba(57, 0, 130, 0.3);
-  transition: box-shadow 0.5s ease;
+  transition: all var(--transition-standard);
 }
 
 .arrow {
@@ -163,8 +169,8 @@ p {
   display: inline-block;
   padding: 4px;
   margin-left: 0.7em;
-  transition: transform 0.3s ease;
-  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
 }
 
 .right {
@@ -177,7 +183,7 @@ p {
   -webkit-transform: rotate(45deg);
 }
 
-.education:hover, .languages div:hover, .project:hover {
+:is(.education:hover, .separate_language:hover, .project:hover) {
   box-shadow: 0 8px 16px rgba(57, 0, 130, 0.5);
 }
 
@@ -186,12 +192,38 @@ p {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .p-education {
   min-width: 8em;
   color: grey;
   font-size: 1.2em;
+}
+
+.course {
+  margin-top: 0.5em;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+:is(.course-table th, .course-table td) {
+  padding: 0.5em 1em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: rgba(151, 71, 255, 0.1);
+  font-weight: 600;
+}
+
+.course-table tr:hover {
+  background-color: rgba(151, 71, 255, 0.05);
 }
 
 .languages {
@@ -201,8 +233,8 @@ p {
   justify-content: space-evenly;
 }
 
-.languages div {
-  background-color: #f5f8f8;
+.separate_language {
+  background-color: var(--card-background);
   border-radius: 10px;
   padding: 0.5em 1em 1em 1em;
   flex-grow: 0;
@@ -210,7 +242,11 @@ p {
   flex-basis: 22%;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(57, 0, 130, 0.3);
-  transition: box-shadow 0.5s ease;
+  transition: all var(--transition-standard);
+}
+
+.separate_language p {
+  text-align: left;
 }
 
 hr {
@@ -241,10 +277,10 @@ hr {
   flex-direction: column;
   overflow: hidden;
   margin: 1em 0;
-  background-color: #f5f8f8;
+  background-color: var(--card-background);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(57, 0, 130, 0.3);
-  transition: box-shadow 0.5s ease;
+  transition: all var(--transition-standard);
 }
 
 .project-content {
@@ -271,7 +307,7 @@ hr {
   cursor: pointer;
   height: 2.1em;
   width: 10em;
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  transition: all var(--transition-standard);
   background-color: #9747ff;
   color: white;
   text-decoration: none;
@@ -290,7 +326,7 @@ hr {
   top: 0;
   left: 0;
   width: 100%;
-  transition: transform 0.4s ease;
+  transition: all var(--transition-standard);
 }
 
 .project img:hover {
@@ -374,7 +410,7 @@ footer div {
 }
 
 footer a {
-  transition: color 0.4s ease;
+  transition: all var(--transition-standard);
   color: grey;
 }
 
