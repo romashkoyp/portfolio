@@ -280,6 +280,11 @@ p {
   bottom: calc(100% + 5px);
 }
 
+.sortable {
+  cursor: pointer;
+  position: relative;
+}
+
 .languages {
   display: flex;
   flex-direction: row;
