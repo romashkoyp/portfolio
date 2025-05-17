@@ -172,21 +172,20 @@ const populateEducationSection = (data) => {
     const contentDiv = document.createElement('div');
     contentDiv.id = institutionId;
     contentDiv.style.display = 'none';
-    
-    // Add degree info
+      // Add degree info
     const degreeP = document.createElement('p');
     degreeP.className = 'course';
-    degreeP.textContent = i.degree;
+    degreeP.textContent = i.degree + " ";
     contentDiv.appendChild(degreeP);
-      // Add certificate if it exists at the institution level
-    if (i.certificate) {
-      const certP = document.createElement('p');
-      certP.className = 'course';
       
+      // Add certificate if it exists at the institution level
+      if (i.certificate) {
       // Create certificate link with modal functionality
       const certLink = document.createElement('a');
       certLink.href = i.certificate;
       certLink.className = 'certificate-link';
+      certLink.style.marginLeft = '8px'; // Add some space between text and icon
+      certLink.style.display = 'inline-block'; // Ensure it displays inline
       certLink.innerHTML = `
         <i class="fa-regular fa-file-lines fa-xl"></i>
         <span class="tooltip">Certificate</span>
@@ -200,8 +199,8 @@ const populateEducationSection = (data) => {
         document.body.classList.add("no-scroll");
       });
       
-      certP.appendChild(certLink);
-      contentDiv.appendChild(certP);
+      // Append the certificate link directly to the degree paragraph instead of creating a new one
+      degreeP.appendChild(certLink);
     }
       // Add description if available
     if (i.description) {
