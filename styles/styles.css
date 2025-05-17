@@ -204,6 +204,8 @@ p {
 .course {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  color: grey;
+  font-size: 1.1em;
 }
 
 .course-table {
