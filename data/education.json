@@ -1,0 +1,173 @@
+[
+  {
+    "institution": "University of Applied Sciences, Jyväskylä",
+    "period": "2024-2027",
+    "degree": "Engineer (Bachelor of Science), Information Technology",
+    "courses": [
+      {
+        "course": "Working Life Finnish, level B1.1",
+        "credits": 5,
+        "certificate": null
+      },
+      {
+        "course": "Finnish 5",
+        "credits": 5,
+        "certificate": null
+      },
+      {
+        "course": "Math1 Equations",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Math1 Support",
+        "credits": 1,
+        "certificate": null
+      },
+      {
+        "course": "InnoFlash",
+        "credits": 2,
+        "certificate": null
+      },
+      {
+        "course": "Git version control and GitLab project management environment",
+        "credits": 2,
+        "certificate": null
+      },
+      {
+        "course": "Basics of Web Development",
+        "credits": 4,
+        "certificate": null
+      },
+      {
+        "course": "Basics of Programming",
+        "credits": 5,
+        "certificate": null
+      },
+      {
+        "course": "ICT Skills",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Me as a Student in Higher Education",
+        "credits": 2,
+        "certificate": null
+      },
+      {
+        "course": "Windows Basics",
+        "credits": 4,
+        "certificate": null
+      },
+      {
+        "course": "Linux Basics",
+        "credits": 4,
+        "certificate": null
+      },
+      {
+        "course": "Math3 Derivative and Integral",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Math2 Functions",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Phys1 Force and Motion",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Cyber Security",
+        "credits": 5,
+        "certificate": null
+      },
+      {
+        "course": "JavaScript Programming",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Databases",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Write in Finnish",
+        "credits": 5,
+        "certificate": null
+      },
+      {
+        "course": "Information Systems and Architecture",
+        "credits": 3,
+        "certificate": null
+      },
+      {
+        "course": "Digital Technology",
+        "credits": 2,
+        "certificate": null
+      },
+      {
+        "course": "Data Networks",
+        "credits": 5,
+        "certificate": null
+      }
+    ]
+  },
+  {
+    "institution": "University of Helsinki",
+    "period": "2024",
+    "degree": "Full Stack Open course, open studies",
+    "courses": [
+      {
+        "course": "Full Stack Web Application Development Exercise",
+        "credits": 10,
+        "certificate": null
+      },
+      {
+        "course": "React, NodeJS, Express, MongoDB, Deployment Web App",
+        "credits": 7,
+        "certificate": "images/certificate-fullstack.png"
+      },
+      {
+        "course": "React Native",
+        "credits": 2,
+        "certificate": "images/certificate-reactnative.png"
+      },
+      {
+        "course": "GraphQL",
+        "credits": 1,
+        "certificate": "images/certificate-graphql.png"
+      },
+      {
+        "course": "Relational databases",
+        "credits": 1,
+        "certificate": "images/certificate-psql.png"
+      },
+      {
+        "course": "CI/CD",
+        "credits": 1,
+        "certificate": "images/certificate-cicd.png"
+      },
+      {
+        "course": "Containers",
+        "credits": 1,
+        "certificate": "images/certificate-containers.png"
+      },
+      {
+        "course": "TypeScript",
+        "credits": 1,
+        "certificate": "images/certificate-typescript.png"
+      }
+    ]
+  },
+  {
+    "institution": "Harvard University",
+    "period": "2022-2023",
+    "degree": "CS50x course, open studies",
+    "certificate": "images/certificate-CS50x.png",
+    "description": ["Basics of IT: C, Python, SQL", "10 problem sets, 9 labs and final project (see below Selvä Vastaus)"]
+  }
+]
