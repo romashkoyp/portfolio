@@ -91,8 +91,8 @@ const setupTableSorting = () => {
       
       rows.sort((rowA, rowB) => {
         // First check if either row is the total row (by checking first cell content)
-        const isTotalRowA = rowA.cells[0].textContent.trim() === 'Total:';
-        const isTotalRowB = rowB.cells[0].textContent.trim() === 'Total:';
+        const isTotalRowA = rowA.cells[0].textContent.trim() === window.siteData.ui.buttons.total;
+        const isTotalRowB = rowB.cells[0].textContent.trim() === window.siteData.ui.buttons.total;
         
         // Always keep total row at the bottom
         if (isTotalRowA) return 1;
@@ -126,9 +126,9 @@ const setupTableSorting = () => {
   });
 }
 
-// Fetch education data from JSON
-const fetchEducationData = async () => {
-  const response = await fetch('data/education.json');
+// Fetch all data from centralized JSON
+const fetchData = async () => {
+  const response = await fetch('data/data.json');
   return await response.json();
 }
 
@@ -188,7 +188,7 @@ const populateEducationSection = (data) => {
       certLink.style.display = 'inline-block'; // Ensure it displays inline
       certLink.innerHTML = `
         <i class="fa-regular fa-file-lines fa-xl"></i>
-        <span class="tooltip">Certificate</span>
+        <span class="tooltip">${window.siteData.ui.tooltips.certificate}</span>
       `;
       
       // Add modal functionality
@@ -223,13 +223,13 @@ const populateEducationSection = (data) => {
       const courseHeader = document.createElement('th');
       courseHeader.className = 'sortable';
       courseHeader.setAttribute('data-sort', 'course');
-      courseHeader.innerHTML = 'Course Module <i class="fa-solid fa-sort"></i>';
+      courseHeader.innerHTML = `${window.siteData.ui.tableHeaders.courseModule} <i class="fa-solid fa-sort"></i>`;
       headerRow.appendChild(courseHeader);
       
       const creditsHeader = document.createElement('th');
       creditsHeader.className = 'sortable';
       creditsHeader.setAttribute('data-sort', 'credits');
-      creditsHeader.innerHTML = 'Credits <i class="fa-solid fa-sort"></i>';
+      creditsHeader.innerHTML = `${window.siteData.ui.tableHeaders.credits} <i class="fa-solid fa-sort"></i>`;
       headerRow.appendChild(creditsHeader);
       
       thead.appendChild(headerRow);
@@ -272,7 +272,7 @@ const populateEducationSection = (data) => {
           
           const tooltip = document.createElement('span');
           tooltip.className = 'tooltip';
-          tooltip.textContent = 'Certificate';
+          tooltip.textContent = window.siteData.ui.tooltips.certificate;
           certificateLink.appendChild(tooltip);
           
           // Add modal functionality
@@ -297,7 +297,7 @@ const populateEducationSection = (data) => {
       const totalRow = document.createElement('tr');
       
       const totalLabelCell = document.createElement('td');
-      totalLabelCell.innerHTML = '<b>Total:</b>';
+      totalLabelCell.innerHTML = `<b>${window.siteData.ui.buttons.total}</b>`;
       totalRow.appendChild(totalLabelCell);
       
       const totalValueCell = document.createElement('td');
@@ -324,14 +324,247 @@ const populateEducationSection = (data) => {
   });
 }
 
+const populatePersonalInfo = (data) => {
+  // Update page title
+  document.title = data.personalInfo.name;
+  
+  // Update main title and name
+  document.querySelector('.title').textContent = data.personalInfo.title;
+  const nameElements = document.querySelectorAll('.name');
+  const nameParts = data.personalInfo.name.split(' ');
+  nameElements[0].textContent = nameParts[0];
+  nameElements[1].textContent = nameParts[1];
+  
+  // Update email links
+  const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+  emailLinks.forEach(link => {
+    link.href = `mailto:${data.personalInfo.email}`;
+  });
+  
+  // Update contact button text
+  const contactButtons = document.querySelectorAll('.contact');
+  contactButtons.forEach(button => {
+    if (button.innerHTML.includes('fa-envelope')) {
+      button.innerHTML = `<i class="fa-solid fa-envelope"></i>${data.ui.buttons.sendEmail}`;
+    }
+  });
+  
+  // Update footer copyright
+  document.querySelector('footer p').textContent = data.personalInfo.copyright;
+}
+
+const populateNavigation = (data) => {
+  const navList = document.querySelector('.nav-list');
+  navList.innerHTML = '';
+  
+  data.navigation.links.forEach(link => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.className = 'nav-link';
+    a.onclick = closeMenu;
+    a.href = link.href;
+    a.textContent = link.text;
+    li.appendChild(a);
+    navList.appendChild(li);
+  });
+}
+
+const populateProfile = (data) => {
+  const profileSection = document.getElementById('profile');
+  const title = profileSection.querySelector('h2');
+  title.textContent = data.profile.title;
+  
+  // Clear existing paragraphs but keep the title
+  const paragraphs = profileSection.querySelectorAll('p, br');
+  paragraphs.forEach(p => p.remove());
+  
+  // Add new paragraphs
+  data.profile.paragraphs.forEach((text, index) => {
+    const p = document.createElement('p');
+    p.textContent = text;
+    profileSection.appendChild(p);
+    
+    if (index < data.profile.paragraphs.length - 1) {
+      const br = document.createElement('br');
+      profileSection.appendChild(br);
+    }
+  });
+}
+
+const populateSkills = (data) => {
+  const skillsSection = document.getElementById('skills');
+  const developerTitle = skillsSection.querySelector('.developer');
+  developerTitle.textContent = data.skills.title;
+  
+  const wordsContainers = skillsSection.querySelectorAll('.words');
+  
+  // Clear existing spans but keep the developer title
+  wordsContainers.forEach(container => {
+    const spans = container.querySelectorAll('span');
+    spans.forEach(span => span.remove());
+  });
+  
+  // Distribute technologies across the three containers
+  const techGroups = [
+    data.skills.technologies.slice(0, 3), // First 3 technologies
+    [{ name: data.skills.title }].concat(data.skills.technologies.slice(3, 5)), // Title + next 2
+    data.skills.technologies.slice(5) // Remaining technologies
+  ];
+  
+  techGroups.forEach((group, containerIndex) => {
+    group.forEach(tech => {
+      if (tech.name !== data.skills.title) { // Skip the title as it's already handled
+        const span = document.createElement('span');
+        span.textContent = tech.name;
+        
+        // Apply styles if specified
+        if (tech.fontSize) span.style.fontSize = tech.fontSize;
+        if (tech.marginTop) span.style.marginTop = tech.marginTop;
+        if (tech.marginBottom) span.style.marginBottom = tech.marginBottom;
+        
+        wordsContainers[containerIndex].appendChild(span);
+      }
+    });
+  });
+}
+
+const populateLanguages = (data) => {
+  const languagesSection = document.querySelector('.languages');
+  
+  // Update the title
+  const titleDiv = languagesSection.querySelector('.separate_language[style*="background-color: #f1e8f8"]');
+  titleDiv.querySelector('h2').textContent = data.languages.title;
+  
+  // Clear existing language divs except the title
+  const languageDivs = languagesSection.querySelectorAll('.separate_language:not([style*="background-color: #f1e8f8"])');
+  languageDivs.forEach(div => div.remove());
+  
+  // Add new language divs
+  data.languages.list.forEach(lang => {
+    const div = document.createElement('div');
+    div.className = 'separate_language';
+    
+    const h2 = document.createElement('h2');
+    h2.textContent = lang.name;
+    div.appendChild(h2);
+    
+    const starsP = document.createElement('p');
+    starsP.style.marginBottom = '0.7em';
+    
+    // Add stars
+    for (let i = 1; i <= 6; i++) {
+      const star = document.createElement('i');
+      star.className = 'fa-solid fa-star';
+      star.style.color = i <= lang.stars ? '#ffd43b' : 'lightgrey';
+      starsP.appendChild(star);
+    }
+    div.appendChild(starsP);
+    
+    const levelP = document.createElement('p');
+    levelP.textContent = lang.level;
+    div.appendChild(levelP);
+    
+    languagesSection.appendChild(div);
+  });
+}
+
+const populateProjects = (data) => {
+  // Update projects header
+  const projectsHeader = document.getElementById('projects');
+  projectsHeader.querySelector('h2').textContent = data.projects.title;
+  
+  const projectsContainer = document.querySelector('.projects');
+  projectsContainer.innerHTML = '';
+  
+  data.projects.list.forEach(project => {
+    const article = document.createElement('article');
+    article.className = 'project';
+    
+    // Screenshot div
+    const screenshotDiv = document.createElement('div');
+    screenshotDiv.className = 'screenshot';
+    
+    const screenshotLink = document.createElement('a');
+    screenshotLink.href = project.image;
+    screenshotLink.target = '_blank';
+    
+    const img = document.createElement('img');
+    img.src = project.image;
+    img.alt = project.imageAlt;
+    
+    screenshotLink.appendChild(img);
+    screenshotDiv.appendChild(screenshotLink);
+    article.appendChild(screenshotDiv);
+    
+    // Project content
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'project-content';
+    
+    const h2 = document.createElement('h2');
+    h2.style.textAlign = 'center';
+    h2.textContent = project.name;
+    contentDiv.appendChild(h2);
+    
+    const p = document.createElement('p');
+    p.textContent = project.description;
+    contentDiv.appendChild(p);
+    
+    article.appendChild(contentDiv);
+    
+    // Project button
+    const button = document.createElement('a');
+    button.href = project.url;
+    button.className = 'project-button contact';
+    button.target = '_blank';
+    button.style.width = 'auto';
+    button.style.padding = '0 1em';
+    button.textContent = project.buttonText;
+    
+    article.appendChild(button);
+    projectsContainer.appendChild(article);
+  });
+}
+
+const populateSocialLinks = (data) => {
+  const footerDiv = document.querySelector('footer div');
+  footerDiv.innerHTML = '';
+  
+  data.ui.socialLinks.forEach(link => {
+    const a = document.createElement('a');
+    a.href = link.url;
+    if (link.url.startsWith('http')) {
+      a.target = '_blank';
+    }
+    
+    const i = document.createElement('i');
+    i.className = link.icon;
+    a.appendChild(i);
+    
+    footerDiv.appendChild(a);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setupImageModal();
   
-  // Fetch education data first, then set up sorting after tables are created
-  fetchEducationData().then(data => {
-    populateEducationSection(data);
+  // Fetch all data first, then populate all sections
+  fetchData().then(data => {
+    // Store data globally for use in other functions
+    window.siteData = data;
+    
+    populatePersonalInfo(data);
+    populateNavigation(data);
+    populateProfile(data);
+    populateSkills(data);
+    populateLanguages(data);
+    populateEducationSection(data.education);
+    populateProjects(data);
+    populateSocialLinks(data);
     
     // Apply sorting after tables have been created
     setupTableSorting();
+    
+    // Re-setup image modal after projects are populated
+    setupImageModal();
   });
 });

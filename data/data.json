@@ -1,0 +1,289 @@
+{
+  "personalInfo": {
+    "name": "YAROSLAV ROMASHKO",
+    "title": "FULLSTACK DEVELOPER",
+    "email": "romashkoyp@gmail.com",
+    "copyright": "Yaroslav Romashko © 2025"
+  },
+  "navigation": {
+    "links": [
+      { "text": "Profile", "href": "#profile" },
+      { "text": "Skills", "href": "#skills" },
+      { "text": "Education", "href": "#education" },
+      { "text": "Projects", "href": "#projects" }
+    ]
+  },
+  "profile": {
+    "title": "Profile",
+    "paragraphs": [
+      "I spent six years working for an IT association back home, where I managed marketing initiatives and led B2B sales efforts to bring new companies into our membership. This role built upon my university degree in management and marketing.",
+      "Now based in Finland, I'm making an exciting career transition into software development. I'm thoroughly passionate about programming and problem-solving, and I've already completed several IT projects, including the website you're currently viewing. Outside of coding, I assist researchers with their data analysis needs.",
+      "I'm actively seeking opportunities as an intern or junior developer. If you or your organization has a suitable opening, I'd be delighted to hear from you."
+    ]
+  },
+  "skills": {
+    "title": "DEVELOPER",
+    "technologies": [
+      { "name": "Jest", "fontSize": "2em", "marginBottom": "0.5em" },
+      { "name": "PostgreSQL", "marginTop": "1em" },
+      { "name": "Django", "fontSize": "1.3em", "marginTop": "1.5em" },
+      { "name": "React", "fontSize": "1.5em", "marginTop": "0em" },
+      { "name": "NodeJS", "marginTop": "0.5em" },
+      { "name": "Docker", "fontSize": "1.7em", "marginTop": "0.2em" },
+      { "name": "Playwright", "marginBottom": "0.5em" },
+      { "name": "Mongo", "fontSize": "2em", "marginTop": "0.2em" }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "list": [
+      {
+        "name": "Russian",
+        "level": "Native proficiency",
+        "stars": 6
+      },
+      {
+        "name": "English", 
+        "level": "Professional working proficiency",
+        "stars": 4
+      },
+      {
+        "name": "Finnish",
+        "level": "Working proficiency", 
+        "stars": 3
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "University of Applied Sciences, Jyväskylä",
+      "period": "2024-2027",
+      "degree": "Engineer (Bachelor of Science), Information Technology",
+      "courses": [
+        {
+          "course": "Working Life Finnish, level B1.1",
+          "credits": 5,
+          "certificate": null
+        },
+        {
+          "course": "Finnish 5",
+          "credits": 5,
+          "certificate": null
+        },
+        {
+          "course": "Math1 Equations",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Math1 Support",
+          "credits": 1,
+          "certificate": null
+        },
+        {
+          "course": "InnoFlash",
+          "credits": 2,
+          "certificate": null
+        },
+        {
+          "course": "Git version control and GitLab project management environment",
+          "credits": 2,
+          "certificate": null
+        },
+        {
+          "course": "Basics of Web Development",
+          "credits": 4,
+          "certificate": null
+        },
+        {
+          "course": "Basics of Programming",
+          "credits": 5,
+          "certificate": null
+        },
+        {
+          "course": "ICT Skills",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Me as a Student in Higher Education",
+          "credits": 2,
+          "certificate": null
+        },
+        {
+          "course": "Windows Basics",
+          "credits": 4,
+          "certificate": null
+        },
+        {
+          "course": "Linux Basics",
+          "credits": 4,
+          "certificate": null
+        },
+        {
+          "course": "Math3 Derivative and Integral",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Math2 Functions",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Phys1 Force and Motion",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Cyber Security",
+          "credits": 5,
+          "certificate": null
+        },
+        {
+          "course": "JavaScript Programming",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Databases",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Write in Finnish",
+          "credits": 5,
+          "certificate": null
+        },
+        {
+          "course": "Information Systems and Architecture",
+          "credits": 3,
+          "certificate": null
+        },
+        {
+          "course": "Digital Technology",
+          "credits": 2,
+          "certificate": null
+        },
+        {
+          "course": "Data Networks",
+          "credits": 5,
+          "certificate": null
+        }
+      ]
+    },
+    {
+      "institution": "University of Helsinki",
+      "period": "2024",
+      "degree": "Full Stack Open course, open studies",
+      "courses": [
+        {
+          "course": "Full Stack Web Application Development Exercise",
+          "credits": 10,
+          "certificate": null
+        },
+        {
+          "course": "React, NodeJS, Express, MongoDB, Deployment Web App",
+          "credits": 7,
+          "certificate": "images/certificate-fullstack.png"
+        },
+        {
+          "course": "React Native",
+          "credits": 2,
+          "certificate": "images/certificate-reactnative.png"
+        },
+        {
+          "course": "GraphQL",
+          "credits": 1,
+          "certificate": "images/certificate-graphql.png"
+        },
+        {
+          "course": "Relational databases",
+          "credits": 1,
+          "certificate": "images/certificate-psql.png"
+        },
+        {
+          "course": "CI/CD",
+          "credits": 1,
+          "certificate": "images/certificate-cicd.png"
+        },
+        {
+          "course": "Containers",
+          "credits": 1,
+          "certificate": "images/certificate-containers.png"
+        },
+        {
+          "course": "TypeScript",
+          "credits": 1,
+          "certificate": "images/certificate-typescript.png"
+        }
+      ]
+    },
+    {
+      "institution": "Harvard University",
+      "period": "2022-2023",
+      "degree": "CS50x course, open studies",
+      "certificate": "images/certificate-CS50x.png",
+      "description": ["Basics of IT: C, Python, SQL", "10 problem sets, 9 labs and final project (see below Selvä Vastaus)"]
+    }
+  ],
+  "projects": {
+    "title": "Projects",
+    "list": [
+      {
+        "name": "Roomies App",
+        "image": "images/roomies.png",
+        "imageAlt": "Screenshot of the Roomies App booking interface",
+        "description": "A comprehensive booking system developed using modern web technologies: JavaScript, NodeJS, Docker, Express, and PostgreSQL for the backend, complemented by React, Vite, Redux, React Big Calendar, Styled Components for the frontend. The application features Jest for backend testing, Playwright for end-to-end testing, and maintains code quality through ESLint. This enterprise-level solution enables authenticated users to book rooms in hotels or office buildings, with full administrative oversight. The project served as my capstone submission for the University of Helsinki's Full Stack Open Course.",
+        "url": "https://roomies-frontend-fpzi.onrender.com/",
+        "buttonText": "Visit Roomies App Website"
+      },
+      {
+        "name": "Selvä Vastaus",
+        "image": "images/selvavastaus.png", 
+        "imageAlt": "Screenshot of the Selvä Vastaus interface",
+        "description": "A linguistic search tool crafted with Python, utilizing Flask and SQLite for backend operations, whilst employing HTML, Bootstrap and Jinja for an intuitive frontend interface. This specialized application helps users locate Finnish words based on their suffixes, offering valuable assistance for language learning and research. I developed this as my final project for Harvard University's CS50x course.",
+        "url": "https://selvavastaus.onrender.com/",
+        "buttonText": "Visit Selvä Vastaus Website"
+      },
+      {
+        "name": "Mainos",
+        "image": "images/mainos.png",
+        "imageAlt": "Screenshot of Mainos",
+        "description": "An interactive location tracking tool for Jyväskylä using JavaScript, Leaflet.js mapping library, and IndexedDB for data persistence. This web application enables users to load campaign-specific locations with unique color coding, track visit progress with automatic saving, and manage multiple campaigns simultaneously. Features include marker clustering, city filtering, legend display, and progress import/export functionality, providing a comprehensive solution for location-based campaign management.",
+        "url": "https://romashkoyp.github.io/mainos/",
+        "buttonText": "Visit Mainos Website"
+      }
+    ]
+  },
+  "ui": {
+    "buttons": {
+      "sendEmail": "Send Email",
+      "total": "Total:"
+    },
+    "tooltips": {
+      "certificate": "Certificate"
+    },
+    "tableHeaders": {
+      "courseModule": "Course Module",
+      "credits": "Credits"
+    },
+    "socialLinks": [
+      {
+        "url": "mailto:romashkoyp@gmail.com",
+        "icon": "fa-solid fa-envelope",
+        "ariaLabel": "Send email"
+      },
+      {
+        "url": "https://github.com/romashkoyp",
+        "icon": "fa-brands fa-github",
+        "ariaLabel": "GitHub profile"
+      },
+      {
+        "url": "https://www.linkedin.com/in/romashkoyp/",
+        "icon": "fa-brands fa-linkedin",
+        "ariaLabel": "LinkedIn profile"
+      }
+    ]
+  }
+}
