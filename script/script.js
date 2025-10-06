@@ -43,6 +43,18 @@ const setupImageModal = () => {
     });
   });
 
+  // Target certificate links in projects section
+  const projectCertificates = document.querySelectorAll(".project-content .certificate-link");
+  
+  projectCertificates.forEach(certLink => {
+    certLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      modal.style.display = "block";
+      modalImg.src = this.getAttribute("href");
+      document.body.classList.add("no-scroll");
+    });
+  });
+
   closeButton.addEventListener("click", closeModal);
   
   modal.addEventListener("click", function(e) {

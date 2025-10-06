@@ -244,6 +244,7 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .certificate-link .tooltip {
