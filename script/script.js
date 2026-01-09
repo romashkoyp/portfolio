@@ -75,6 +75,12 @@ const closeModal = () => {
   document.body.classList.remove("no-scroll");
 }
 
+// Get current year
+const setupCurrentYear = () => {
+  const year = new Date();
+  document.getElementById('currentYear').textContent = year.getFullYear();
+}
+
 // Table sorting functionality
 const setupTableSorting = () => {
   document.querySelectorAll('th.sortable').forEach(headerCell => {
@@ -345,5 +351,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Apply sorting after tables have been created
     setupTableSorting();
+
+    // Get year for footer
+    setupCurrentYear();
   });
 });
