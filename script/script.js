@@ -229,8 +229,8 @@ const populateEducationSection = (data) => {
       });
     }
     
-    // Add courses table if available
-    if (i.courses && i.courses.length > 0) {
+    // Add courses table if available (flat list) or subsections (grouped list)
+    if ((i.courses && i.courses.length > 0) || (i.subsections && i.subsections.length > 0)) {
       const table = document.createElement('table');
       table.className = 'course-table';
       
@@ -239,15 +239,23 @@ const populateEducationSection = (data) => {
       const headerRow = document.createElement('tr');
       
       const courseHeader = document.createElement('th');
-      courseHeader.className = 'sortable';
-      courseHeader.setAttribute('data-sort', 'course');
-      courseHeader.innerHTML = 'Course Module <i class="fa-solid fa-sort"></i>';
+      if (!i.subsections) {
+        courseHeader.className = 'sortable';
+        courseHeader.setAttribute('data-sort', 'course');
+        courseHeader.innerHTML = 'Course Module <i class="fa-solid fa-sort"></i>';
+      } else {
+        courseHeader.innerHTML = 'Course Module';
+      }
       headerRow.appendChild(courseHeader);
       
       const creditsHeader = document.createElement('th');
-      creditsHeader.className = 'sortable';
-      creditsHeader.setAttribute('data-sort', 'credits');
-      creditsHeader.innerHTML = 'Credits <i class="fa-solid fa-sort"></i>';
+      if (!i.subsections) {
+        creditsHeader.className = 'sortable';
+        creditsHeader.setAttribute('data-sort', 'credits');
+        creditsHeader.innerHTML = 'Credits <i class="fa-solid fa-sort"></i>';
+      } else {
+        creditsHeader.innerHTML = 'Credits';
+      }
       headerRow.appendChild(creditsHeader);
       
       thead.appendChild(headerRow);
@@ -256,16 +264,28 @@ const populateEducationSection = (data) => {
       // Create table body
       const tbody = document.createElement('tbody');
       
-      // Calculate total credits
-      const totalCredits = i.courses.reduce((sum, course) => sum + course.credits, 0);
-      
-      // Add course rows
-      i.courses.forEach(course => {
+      let totalCredits = 0;
+
+      // Function to render a single course row
+      const renderCourse = (course, isSubGroup = false, subGroupId = '') => {
         const row = document.createElement('tr');
+        if (isSubGroup) {
+          row.classList.add(`subgroup-${subGroupId}`);
+        }
         
         // Course name cell
         const nameCell = document.createElement('td');
         nameCell.textContent = course.course;
+        
+        if (course.uncompleted) {
+          const inProgressSpan = document.createElement('span');
+          inProgressSpan.style.color = '#888';
+          inProgressSpan.style.fontStyle = 'italic';
+          inProgressSpan.style.marginLeft = '8px';
+          inProgressSpan.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: 1em; height: 1em; fill: currentColor; margin-right: 4px; vertical-align: -0.125em;" viewBox="0 0 640 640"><path d="M272 112C272 85.5 293.5 64 320 64C346.5 64 368 85.5 368 112C368 138.5 346.5 160 320 160C293.5 160 272 138.5 272 112zM272 528C272 501.5 293.5 480 320 480C346.5 480 368 501.5 368 528C368 554.5 346.5 576 320 576C293.5 576 272 554.5 272 528zM112 272C138.5 272 160 293.5 160 320C160 346.5 138.5 368 112 368C85.5 368 64 346.5 64 320C64 293.5 85.5 272 112 272zM480 320C480 293.5 501.5 272 528 272C554.5 272 576 293.5 576 320C576 346.5 554.5 368 528 368C501.5 368 480 346.5 480 320zM139 433.1C157.8 414.3 188.1 414.3 206.9 433.1C225.7 451.9 225.7 482.2 206.9 501C188.1 519.8 157.8 519.8 139 501C120.2 482.2 120.2 451.9 139 433.1zM139 139C157.8 120.2 188.1 120.2 206.9 139C225.7 157.8 225.7 188.1 206.9 206.9C188.1 225.7 157.8 225.7 139 206.9C120.2 188.1 120.2 157.8 139 139zM501 433.1C519.8 451.9 519.8 482.2 501 501C482.2 519.8 451.9 519.8 433.1 501C414.3 482.2 414.3 451.9 433.1 433.1C451.9 414.3 482.2 414.3 501 433.1z"><animateTransform attributeName="transform" type="rotate" from="0 320 320" to="360 320 320" dur="2s" repeatCount="indefinite" /></path></svg> In progress';
+          nameCell.appendChild(inProgressSpan);
+        }
+        
         row.appendChild(nameCell);
         
         // Credits cell with certificate if available
@@ -278,7 +298,8 @@ const populateEducationSection = (data) => {
         const creditsSpan = document.createElement('span');
         creditsSpan.textContent = course.credits;
         creditsContainer.appendChild(creditsSpan);
-          if (course.certificate) {
+        
+        if (course.certificate) {
           const certificateSpan = document.createElement('span');
           const certificateLink = document.createElement('a');
           certificateLink.href = course.certificate;
@@ -293,7 +314,6 @@ const populateEducationSection = (data) => {
           tooltip.textContent = 'Certificate';
           certificateLink.appendChild(tooltip);
           
-          // Add modal functionality
           certificateLink.addEventListener('click', function(e) {
             e.preventDefault();
             modal.style.display = "block";
@@ -309,7 +329,47 @@ const populateEducationSection = (data) => {
         row.appendChild(creditsCell);
         
         tbody.appendChild(row);
-      });
+      };
+
+      if (i.subsections) {
+        // Grouped format
+        i.subsections.forEach((sub, subIdx) => {
+          // Add section header row
+          const subId = `${institutionId}-sub-${subIdx}`;
+          const subHeaderRow = document.createElement('tr');
+          subHeaderRow.style.cursor = 'pointer';
+          subHeaderRow.style.backgroundColor = '#f1e8f8';
+          subHeaderRow.onclick = () => {
+            const rows = tbody.querySelectorAll(`.subgroup-${subId}`);
+            const arrowIcon = subHeaderRow.querySelector('.fa-chevron-up, .fa-chevron-down');
+            const isHidden = rows[0].style.display === 'none';
+            
+            rows.forEach(r => r.style.display = isHidden ? '' : 'none');
+            
+            if (arrowIcon) {
+              arrowIcon.className = isHidden ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down';
+            }
+          };
+          
+          const subHeaderCell = document.createElement('td');
+          subHeaderCell.colSpan = 2;
+          subHeaderCell.innerHTML = `<strong>${sub.title}</strong> <i class="fa-solid fa-chevron-up" style="float: right; margin-top: 4px;"></i>`;
+          subHeaderRow.appendChild(subHeaderCell);
+          tbody.appendChild(subHeaderRow);
+          
+          // Render group courses
+          sub.courses.forEach(course => {
+            renderCourse(course, true, subId);
+            totalCredits += course.credits;
+          });
+        });
+      } else {
+        // Flat format
+        i.courses.forEach(course => {
+          renderCourse(course);
+          totalCredits += course.credits;
+        });
+      }
       
       // Add total row
       const totalRow = document.createElement('tr');

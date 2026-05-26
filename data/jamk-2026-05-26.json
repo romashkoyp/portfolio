@@ -1,0 +1,92 @@
+[
+  {
+    "btn": "TRANSFERABLE SKILLS",
+    "btn (2)": "Me as a Student in Higher Education (2 Credits)",
+    "btn (3)": "Information Seeking and Reporting (1 Credits)",
+    "btn (4)": "Career Planning and Working Life Skills (2 Credits), x",
+    "btn (5)": "ICT Skills (3 Credits)"
+  },
+  {
+    "btn": "LANGUAGE AND COMMUNICATION",
+    "btn (2)": "Working Life Communication, Finnish (3 Credits)",
+    "btn (3)": "English for Working Life (4 Credits)",
+	"btn (3)": "Working Life Finnish, level B1.1 (5 Credits)",
+    "btn (4)": "Write in Finnish (5 Credits)",
+    "btn (5)": "Finnish 5 (5 Credits)"
+  },
+  {
+    "btn": "JAMK FUTURE FACTORY",
+    "btn (2)": "Basics of Sustainable Development (1 Credits)",
+    "btn (3)": "InnoFlash (2 Credits)",
+    "btn (4)": "Entrepreneurship (3 Credits)",
+    "btn (5)": "Working Life Project (9 Credits), x"
+  },
+  {
+    "btn": "BASIC ENGINEERING MATHEMATICS AND PHYSICS",
+	"btn (3)": "Math1 Support (1 Credits)",
+    "btn (2)": "Math1 Equations (3 Credits)",
+    "btn (3)": "Math2 Functions (3 Credits)",
+    "btn (4)": "Math3 Derivative and Integral (3 Credits)",
+    "btn (5)": "Math4 Discrete Mathematics (3 Credits)",
+    "btn (6)": "Phys1 Force and Motion (3 Credits)",
+    "btn (7)": "Phys2 Energy (3 Credits)",
+    "btn (8)": "Phys3 Electromagnetism and Applications (3 Credits)",
+    "btn (9)": "Physics 4 - Laboratory work (2 Credits), x"
+  },
+  {
+    "btn": "OPERATIONS",
+    "btn (2)": "Data Networks (5 Credits)",
+    "btn (3)": "Linux Basics (4 Credits)",
+    "btn (4)": "Servers and containers (5 Credits)",
+    "btn (5)": "Digital Technology (2 Credits)",
+    "btn (6)": "Information Systems and Architecture (3 Credits)",
+    "btn (7)": "Windows Basics (4 Credits)",
+    "btn (8)": "Scripting and Automatization (3 Credits)"
+  },
+  {
+    "btn": "DEVELOPER",
+    "btn (2)": "Basics of Programming (5 Credits)",
+    "btn (3)": "Frontend Programming (5 Credits)",
+    "btn (4)": "Basics of Web Development (4 Credits)",
+    "btn (5)": "JavaScript Programming (3 Credits)",
+    "btn (6)": "Databases (3 Credits)",
+    "btn (7)": "Project Management and Quality Assurance (5 Credits)",
+    "btn (8)": "Data Structures and Algorithms (3 Credits)",
+    "btn (9)": "Data analytics and artificial intelligence (4 Credits)",
+    "btn (10)": "Backend Programming (5 Credits)",
+	"btn (6)": "Git version control and GitLab project management environment (2 Credits)"
+  },
+  {
+    "btn": "SECURITY",
+    "btn (2)": "Cyber Security (5 Credits)",
+    "btn (3)": "Information Security Technologies (5 Credits)",
+    "btn (4)": "Web Application Security Testing (5 Credits)"
+  },
+  {
+    "btn (2)": "PROFESSIONAL STUDIES - DATA ANALYTICS",
+    "btn (3)": "Mathematical Foundations of Machine Learning (5 Credits), x",
+    "btn (4)": "Data Sources and Data Preprocessing (5 Credits), x",
+    "btn (5)": "Data Analysis and Visualization (5 Credits), x",
+    "btn (6)": "ADVANCED PROFESSIONAL STUDIES - MACHINE LEARNING METHODS",
+    "btn (7)": "Machine Learning: Classification Methods (5 Credits), x",
+    "btn (8)": "Machine Learning: Regression Methods (5 Credits), x",
+    "btn (9)": "Deep Learning (5 Credits), x",
+    "btn (10)": "ADVANCED PROFESSIONAL STUDIES - DATA-BASED ARTIFICIAL INTELLIGENCE PROJECTS",
+    "btn (11)": "Time Series Analysis and Forecasting (5 Credits), x",
+    "btn (12)": "Data Analytics Project (5 Credits), x",
+    "btn (13)": "Machine Learning Project (5 Credits), x",
+  },
+  {
+    "btn": "DEVELOPMENT ACTIVITIES AND THESIS",
+    "btn (2)": "Research and Development (5 Credits), x",
+    "btn (3)": "Bachelor's Thesis, Planning (3 Credits), x",
+    "btn (4)": "Bachelor's Thesis, Thesis Writing (2 Credits), x",
+    "btn (5)": "Bachelor's Thesis, Implementation (6 Credits), x",
+    "btn (6)": "Bachelor's Thesis, Reporting and Assessment (4 Credits), x",
+    "btn (7)": "Maturity Test, Bachelor's Degree (0 Credits), x"
+  },
+  {
+    "btn": "PRACTICAL TRAINING",
+    "btn (2)": "Practical training (30 Credits), x"
+  }
+]

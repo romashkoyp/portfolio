@@ -3,116 +3,124 @@
     "institution": "Jyväskylä University of Applied Sciences",
     "period": "2024-2027",
     "degree": "Engineer (Bachelor of Science), Information Technology",
-    "courses": [
+    "subsections": [
       {
-        "course": "Working Life Finnish, level B1.1",
-        "credits": 5,
-        "certificate": null
+        "title": "TRANSFERABLE SKILLS",
+        "courses": [
+          { "course": "Me as a Student in Higher Education", "credits": 2, "uncompleted": false },
+          { "course": "Information Seeking and Reporting", "credits": 1, "uncompleted": false },
+          { "course": "Career Planning and Working Life Skills", "credits": 2, "uncompleted": true },
+          { "course": "ICT Skills", "credits": 3, "uncompleted": false }
+        ]
       },
       {
-        "course": "Finnish 5",
-        "credits": 5,
-        "certificate": null
+        "title": "LANGUAGE AND COMMUNICATION",
+        "courses": [
+          { "course": "Working Life Communication, Finnish", "credits": 3, "uncompleted": false },
+          { "course": "English for Working Life", "credits": 4, "uncompleted": false },
+          { "course": "Working Life Finnish, level B1.1", "credits": 5, "uncompleted": false },
+          { "course": "Write in Finnish", "credits": 5, "uncompleted": false },
+          { "course": "Finnish 5", "credits": 5, "uncompleted": false }
+        ]
       },
       {
-        "course": "Math1 Equations",
-        "credits": 3,
-        "certificate": null
+        "title": "JAMK FUTURE FACTORY",
+        "courses": [
+          { "course": "Basics of Sustainable Development", "credits": 1, "uncompleted": false },
+          { "course": "InnoFlash", "credits": 2, "uncompleted": false },
+          { "course": "Entrepreneurship", "credits": 3, "uncompleted": false },
+          { "course": "Working Life Project", "credits": 9, "uncompleted": true }
+        ]
       },
       {
-        "course": "Math1 Support",
-        "credits": 1,
-        "certificate": null
+        "title": "BASIC ENGINEERING MATHEMATICS AND PHYSICS",
+        "courses": [
+          { "course": "Math1 Support", "credits": 1, "uncompleted": false },
+          { "course": "Math1 Equations", "credits": 3, "uncompleted": false },
+          { "course": "Math2 Functions", "credits": 3, "uncompleted": false },
+          { "course": "Math3 Derivative and Integral", "credits": 3, "uncompleted": false },
+          { "course": "Math4 Discrete Mathematics", "credits": 3, "uncompleted": false },
+          { "course": "Phys1 Force and Motion", "credits": 3, "uncompleted": false },
+          { "course": "Phys2 Energy", "credits": 3, "uncompleted": false },
+          { "course": "Phys3 Electromagnetism and Applications", "credits": 3, "uncompleted": false },
+          { "course": "Physics 4 - Laboratory work", "credits": 2, "uncompleted": true }
+        ]
       },
       {
-        "course": "InnoFlash",
-        "credits": 2,
-        "certificate": null
+        "title": "OPERATIONS",
+        "courses": [
+          { "course": "Data Networks", "credits": 5, "uncompleted": false },
+          { "course": "Linux Basics", "credits": 4, "uncompleted": false },
+          { "course": "Servers and containers", "credits": 5, "uncompleted": false },
+          { "course": "Digital Technology", "credits": 2, "uncompleted": false },
+          { "course": "Information Systems and Architecture", "credits": 3, "uncompleted": false },
+          { "course": "Windows Basics", "credits": 4, "uncompleted": false },
+          { "course": "Scripting and Automatization", "credits": 3, "uncompleted": false }
+        ]
       },
       {
-        "course": "Git version control and GitLab project management environment",
-        "credits": 2,
-        "certificate": null
+        "title": "DEVELOPER",
+        "courses": [
+          { "course": "Basics of Programming", "credits": 5, "uncompleted": false },
+          { "course": "Frontend Programming", "credits": 5, "uncompleted": false },
+          { "course": "Basics of Web Development", "credits": 4, "uncompleted": false },
+          { "course": "JavaScript Programming", "credits": 3, "uncompleted": false },
+          { "course": "Databases", "credits": 3, "uncompleted": false },
+          { "course": "Project Management and Quality Assurance", "credits": 5, "uncompleted": false },
+          { "course": "Data Structures and Algorithms", "credits": 3, "uncompleted": false },
+          { "course": "Data analytics and artificial intelligence", "credits": 4, "uncompleted": false },
+          { "course": "Backend Programming", "credits": 5, "uncompleted": false },
+          { "course": "Git version control and GitLab project management environment", "credits": 2, "uncompleted": false }
+        ]
       },
       {
-        "course": "Basics of Web Development",
-        "credits": 4,
-        "certificate": null
+        "title": "SECURITY",
+        "courses": [
+          { "course": "Cyber Security", "credits": 5, "uncompleted": false },
+          { "course": "Information Security Technologies", "credits": 5, "uncompleted": false },
+          { "course": "Web Application Security Testing", "credits": 5, "uncompleted": false }
+        ]
       },
       {
-        "course": "Basics of Programming",
-        "credits": 5,
-        "certificate": null
+        "title": "PROFESSIONAL STUDIES - DATA ANALYTICS",
+        "courses": [
+          { "course": "Mathematical Foundations of Machine Learning", "credits": 5, "uncompleted": true },
+          { "course": "Data Sources and Data Preprocessing", "credits": 5, "uncompleted": true },
+          { "course": "Data Analysis and Visualization", "credits": 5, "uncompleted": true }
+        ]
       },
       {
-        "course": "ICT Skills",
-        "credits": 3,
-        "certificate": null
+        "title": "ADVANCED PROFESSIONAL STUDIES - MACHINE LEARNING METHODS",
+        "courses": [
+          { "course": "Machine Learning: Classification Methods", "credits": 5, "uncompleted": true },
+          { "course": "Machine Learning: Regression Methods", "credits": 5, "uncompleted": true },
+          { "course": "Deep Learning", "credits": 5, "uncompleted": true }
+        ]
       },
       {
-        "course": "Me as a Student in Higher Education",
-        "credits": 2,
-        "certificate": null
+        "title": "ADVANCED PROFESSIONAL STUDIES - DATA-BASED ARTIFICIAL INTELLIGENCE PROJECTS",
+        "courses": [
+          { "course": "Time Series Analysis and Forecasting", "credits": 5, "uncompleted": true },
+          { "course": "Data Analytics Project", "credits": 5, "uncompleted": true },
+          { "course": "Machine Learning Project", "credits": 5, "uncompleted": true }
+        ]
       },
       {
-        "course": "Windows Basics",
-        "credits": 4,
-        "certificate": null
+        "title": "DEVELOPMENT ACTIVITIES AND THESIS",
+        "courses": [
+          { "course": "Research and Development", "credits": 5, "uncompleted": true },
+          { "course": "Bachelor's Thesis, Planning", "credits": 3, "uncompleted": true },
+          { "course": "Bachelor's Thesis, Thesis Writing", "credits": 2, "uncompleted": true },
+          { "course": "Bachelor's Thesis, Implementation", "credits": 6, "uncompleted": true },
+          { "course": "Bachelor's Thesis, Reporting and Assessment", "credits": 4, "uncompleted": true },
+          { "course": "Maturity Test, Bachelor's Degree", "credits": 0, "uncompleted": true }
+        ]
       },
       {
-        "course": "Linux Basics",
-        "credits": 4,
-        "certificate": null
-      },
-      {
-        "course": "Math3 Derivative and Integral",
-        "credits": 3,
-        "certificate": null
-      },
-      {
-        "course": "Math2 Functions",
-        "credits": 3,
-        "certificate": null
-      },
-      {
-        "course": "Phys1 Force and Motion",
-        "credits": 3,
-        "certificate": null
-      },
-      {
-        "course": "Cyber Security",
-        "credits": 5,
-        "certificate": null
-      },
-      {
-        "course": "JavaScript Programming",
-        "credits": 3,
-        "certificate": null
-      },
-      {
-        "course": "Databases",
-        "credits": 3,
-        "certificate": null
-      },
-      {
-        "course": "Write in Finnish",
-        "credits": 5,
-        "certificate": null
-      },
-      {
-        "course": "Information Systems and Architecture",
-        "credits": 3,
-        "certificate": null
-      },
-      {
-        "course": "Digital Technology",
-        "credits": 2,
-        "certificate": null
-      },
-      {
-        "course": "Data Networks",
-        "credits": 5,
-        "certificate": null
+        "title": "PRACTICAL TRAINING",
+        "courses": [
+          { "course": "Practical training", "credits": 30, "uncompleted": true }
+        ]
       }
     ]
   },
