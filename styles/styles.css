@@ -354,6 +354,16 @@ hr {
   flex: 1;
 }
 
+.text-link {
+  color: #9747ff;
+  font-weight: 600;
+  transition: all var(--transition-standard);
+}
+
+.text-link:hover {
+  color: #be9cea;
+}
+
 .project-button {
   margin: 3em auto;
 }
