@@ -1,8 +1,8 @@
 /* inspired by this design https://www.behance.net/gallery/212417965/Personal-Portfolio-Web-UI-DesignConcept?tracking_source=search_projects|web+design+portfolio&l=103 */
 
 :root {
-  --transition-standard: 0.4s cubic-bezier(.25,.5,.25,1);
-  --card-background:rgba(248, 248, 248);
+  --transition-standard: 0.4s cubic-bezier(.25, .5, .25, 1);
+  --card-background: rgba(248, 248, 248);
 }
 
 * {
@@ -77,7 +77,8 @@ body {
   font-weight: 800;
 }
 
-h1.name, h4.developer {
+h1.name,
+h4.developer {
   background: linear-gradient(to right, #f82d96, #9747ff, #0075ff);
   -webkit-text-fill-color: transparent;
   background-clip: padding-box;
@@ -393,7 +394,7 @@ hr {
   border-radius: 10px;
 }
 
-.project img{
+.project img {
   position: absolute;
   top: 0;
   left: 0;
@@ -514,8 +515,13 @@ footer a:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .close-modal {
@@ -557,6 +563,7 @@ footer a:hover {
     flex-basis: 45%;
     margin: 0.5em 0;
   }
+
   .project {
     flex-basis: 100%;
   }
@@ -583,15 +590,15 @@ footer a:hover {
     width: 100%;
     order: 2;
   }
- 
+
   .bracket-left {
     order: 2;
   }
-  
+
   .photo-frame {
     order: 2;
   }
-  
+
   .bracket-right {
     order: 2;
   }
@@ -599,7 +606,7 @@ footer a:hover {
   .desktop-button {
     display: none;
   }
-  
+
   .mobile-button {
     order: 3;
     display: flex;
